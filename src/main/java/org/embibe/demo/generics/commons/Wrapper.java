@@ -1,4 +1,4 @@
-package org.embibe.demo.generics.basics;
+package org.embibe.demo.generics.commons;
 
 
 import lombok.AllArgsConstructor;

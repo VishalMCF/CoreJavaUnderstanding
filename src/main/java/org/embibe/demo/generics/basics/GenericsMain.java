@@ -1,5 +1,8 @@
 package org.embibe.demo.generics.basics;
 
+import org.embibe.demo.generics.commons.Wrapper;
+import org.embibe.demo.generics.commons.WrapperGeneric;
+
 public class GenericsMain {
 
     public static void main(String[] args) {
@@ -46,7 +49,7 @@ public class GenericsMain {
     }
 
     /**
-     * I the below method we can see that how generics helps us to decrease the risks of having any ClassCasteException
+     * In the below method we can see that how generics helps us to decrease the risks of having any ClassCasteException
      * Generics helps a class to restrict what type a data it can recieve at the compile time only saving us from
      * unexpected exceptions at the runtime.
      */
