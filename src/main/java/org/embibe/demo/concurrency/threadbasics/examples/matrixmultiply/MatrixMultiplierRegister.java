@@ -12,8 +12,8 @@ public class MatrixMultiplierRegister {
     Map<String, IMatrixMultiplierStrategy> map = new HashMap<>();
 
     public MatrixMultiplierRegister() {
-        map.put("serialVersion", new SerialMatrixMultiplierStrategy<>());
-        map.put("parallelV1", new ParallelMatrixMultiplierStrategyV1<>());
+        map.put("serialVersion", new SerialMatrixMultiplierStrategy());
+        map.put("parallelV1", new ParallelMatrixMultiplierStrategyV1());
         map.put("parallelV2", new ParallelMatrixMultiplierStrategyV2<>());
         map.put("parallelV3", new ParallelMatrixMultiplierStrategyV3<>());
     }

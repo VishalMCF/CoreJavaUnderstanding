@@ -1,6 +1,6 @@
 package org.embibe.demo.concurrency.threadbasics.examples.matrixmultiply.strategy;
 
-public class SerialMatrixMultiplierStrategy<T extends Number> extends AbstractMatrixMultiplierStrategy<Number> {
+public class SerialMatrixMultiplierStrategy extends AbstractMatrixMultiplierStrategy<Number> {
 
     @Override
     public Number[][] multiply(Number[][] matrixA, Number[][] matrixB) {
