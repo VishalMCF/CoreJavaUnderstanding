@@ -2,6 +2,7 @@ package org.embibe.demo.concurrency.threadbasics.examples.matrixmultiply.strateg
 
 import java.util.ArrayList;
 import java.util.List;
+import org.embibe.demo.concurrency.threadbasics.examples.matrixmultiply.strategy.model.ThreadPerElement;
 
 public class ParallelMatrixMultiplierStrategyV1 extends AbstractMatrixMultiplierStrategy<Number> {
 
@@ -17,9 +18,7 @@ public class ParallelMatrixMultiplierStrategyV1 extends AbstractMatrixMultiplier
             for(int j=0; j<matrixB[0].length; j++) {
                 while(cnt % totalThreads != 0) {
                     cnt++;
-                    int finalI = i;
-                    int finalJ = j;
-                    Thread thread  = new Thread(new ThreadPerElement(matrixA, matrixB, result, finalI, finalJ));
+                    Thread thread  = new Thread(new ThreadPerElement(matrixA, matrixB, result, i, j));
                     thread.start();
                     threads.add(thread);
                 }

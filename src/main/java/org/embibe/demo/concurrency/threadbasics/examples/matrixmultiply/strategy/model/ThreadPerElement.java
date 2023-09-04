@@ -1,4 +1,4 @@
-package org.embibe.demo.concurrency.threadbasics.examples.matrixmultiply.strategy;
+package org.embibe.demo.concurrency.threadbasics.examples.matrixmultiply.strategy.model;
 
 public class ThreadPerElement implements Runnable {
 
