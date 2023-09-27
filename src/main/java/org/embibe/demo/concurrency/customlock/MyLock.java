@@ -14,7 +14,7 @@ public class MyLock {
      * lock It uses a tryGetAccess() private method.
      */
 
-    public void accessLock() {
+    public synchronized void accessLock() {
         while (!tryGetAccess()) {
             try {
                 wait();
@@ -38,7 +38,7 @@ public class MyLock {
      *
      * @return
      */
-    private boolean tryGetAccess() {
+    private synchronized boolean tryGetAccess() {
         if (currentThread == Thread.currentThread()) {
             acquiredCount++;
             return true;
@@ -63,7 +63,7 @@ public class MyLock {
      * times and Thread B acquired 3 times and release 0 times
      */
 
-    public void releaseLock() {
+    public synchronized void releaseLock() {
         if (currentThread == Thread.currentThread()) {
             acquiredCount--;
             if(acquiredCount==0){
