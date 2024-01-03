@@ -1,0 +1,12 @@
+Question 1) What is buffer in java?
+Answer) A buffer is an object that stores a fixed amount of data to be sent to or from an I/O service.
+        It sits between an application and a channel.
+
+        What is a channel?
+        A Channel is a representation of a connection between data source and a destination, such as file or network-socket.
+        Channels can be read from or written to, but this interaction does not happen directly instead it happens through buffers.
+        Buffer hold the data. When you read the data from a channel it is stored into a buffer and when you write data it is written
+        from buffer to the channel.
+
+        What are the 4 properties of a buffer?
+        1. capacity 2. position 3. mark 4. limit
