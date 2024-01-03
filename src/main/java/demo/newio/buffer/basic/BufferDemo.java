@@ -9,6 +9,14 @@ import java.util.Random;
 // 3. using wrap(byte[] array, int offset, int limit)
 
 
+// use get() and put() method to read ot write to the buffer
+
+// use the flip() method to change the mode of the buffer from either read mode to write mode or vice-versa
+
+// use the mark() method to return to the position via reset() method. This will reset the postion to an earlier offset and all the remaing items
+// in the buffer will be sent to channel
+
+
 public class BufferDemo {
 
     static Random rand = new Random();

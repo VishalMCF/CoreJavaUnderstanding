@@ -1,0 +1,4 @@
+Ques) What are a channels?
+Ans) A Channel is an object that represents an open-connection to a hardware device, a file, a network socket, an application component, or another
+entity that is capable of performing writes, read or other I/O operations. Channels efficeintly transfers data between byte buffers and operating
+system-based I/O service sources or destinations.
