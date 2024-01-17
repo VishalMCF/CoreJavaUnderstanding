@@ -1,4 +1,4 @@
-package demo.networking.basicintro;
+package demo.networking.basicintro.echoserver;
 
 public class EchoServer {
 

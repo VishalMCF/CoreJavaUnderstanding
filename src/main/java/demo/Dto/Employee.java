@@ -1,4 +1,7 @@
-package org.embibe.demo.Dto;
+package demo.Dto;
+
+import demo.Dto.Address;
+import demo.Dto.Person;
 
 import java.io.*;
 

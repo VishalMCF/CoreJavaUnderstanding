@@ -1,4 +1,4 @@
-package org.embibe.demo.Dto;
+package demo.Dto;
 
 import java.io.*;
 

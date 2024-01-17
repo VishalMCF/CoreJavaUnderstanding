@@ -1,15 +1,18 @@
-package org.embibe.demo.serializable;
+package demo.serializable;
+
+import demo.Dto.Address;
+import demo.Dto.Employee;
 
 import java.io.*;
 import java.util.*;
-import org.embibe.demo.Dto.*;
 
 /**
- * Important points regarding serialization interface:- 1) It is a marker interface which is used by the compiler to mark a class serializable 2) If a
- * class implements this interface and it also extends a class then the superclass does not need to implement serializable 3) If there is an instance
- * which is a custom class composed of further custom objects then all those objects classes must also implement serializable, or they need to be
- * marked as transient
- * Dusring deserialization No argumnent constructor must be present in the class.
+ * Important points regarding serialization interface:-
+ * 1) It is a marker interface which is used by the compiler to mark a class serializable
+ * 2) If a class implements this interface and it also extends a class then the superclass does not need to implement serializable
+ * 3) If there is an instance which is a custom class composed of further custom objects then all those objects classes must also implement
+ * serializable, or they need to be marked as transient
+ * During deserialization No argument constructor must be present in the class.
  */
 
 public class SerializableDemo {
