@@ -1,4 +1,4 @@
-package demo.networking.basicintro.urlconnection;
+package demo.networking.basicintro.urlconnectionintro;
 
 import java.io.BufferedReader;
 import java.io.IOException;
