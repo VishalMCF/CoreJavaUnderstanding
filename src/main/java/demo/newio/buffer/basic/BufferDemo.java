@@ -31,11 +31,16 @@ public class BufferDemo {
         // we will set the limit to 100 so that we can read inly 100 items from the buffer
 
         ByteBuffer myBuffer = ByteBuffer.allocate(1024);
-        for(int i=0; i<1000; i++) {
+
+        // putting 824 items in the buffer
+        for(int i=0; i<824; i++) {
             int item = rand.nextInt(256);
             item = item < 0 ? -1*item : item;
             myBuffer.put((byte)item);
         }
+
+        // let's see what are the values of the 4 properties of the buffer i.e -> position, capacity, limit, mark
+        printBufferProps(myBuffer);
 
         // items are put into the buffer let's now flip it and start reading from it
         myBuffer.flip(); // switched to reading mode
@@ -44,11 +49,15 @@ public class BufferDemo {
         int c = 0;
         while(myBuffer.hasRemaining()){
             byte b = myBuffer.get();
-//            System.out.print("item -> ");
-//            System.out.print(b+"\n");
+            System.out.print("item -> ");
+            System.out.print(b+"\n");
             c++;
         }
         System.out.println("Item read => "+c);
+
+        myBuffer.compact();
+
+        printBufferProps(myBuffer);
     }
 
     public static void execute_demo_for_buffer_basics(){
@@ -66,6 +75,13 @@ public class BufferDemo {
         System.out.println("Changing buffer limit to 5");
         // will throw an exception if run
         buffer.limit(9);
+    }
+
+    private static void printBufferProps(Buffer myBuffer){
+        System.out.println("position -> "+myBuffer.position());
+        System.out.println("limit -> "+myBuffer.limit());
+        System.out.println("mark -> "+myBuffer.mark());
+        System.out.println("capacity -> "+myBuffer.capacity());
     }
 
 }
