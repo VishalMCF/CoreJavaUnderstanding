@@ -1,4 +1,4 @@
-package org.embibe.demo.leetcode.lfu;
+package demo.leetcode.lfu;
 
 import java.util.ArrayList;
 import java.util.Arrays;
